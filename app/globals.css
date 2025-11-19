@@ -21,6 +21,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
+  font-family: var(--font-heebo, 'Heebo', sans-serif);
+  line-height: 1.6;
 }
 
 a {

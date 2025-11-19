@@ -1,17 +1,21 @@
 import './globals.css';
 import { Heebo } from 'next/font/google';
 
-const heebo = Heebo({ subsets: ['hebrew'], weight: ['400', '500', '700'] });
-
 export const metadata = {
-  title: 'HOMECARE+ | מערכת ניהול מוסדות סיעודיים',
-  description: 'אפליקציית HOMECARE+ לניהול מוסדות סיעודיים - ממשק RTL מלא בעברית',
+  title: 'HOMECARE+ | ניהול מוסדות סיעודיים',
+  description: 'מערכת WEB מלאה לניהול מוסדות סיעודיים עם תמיכה ב-RTL.',
 };
+
+const heebo = Heebo({
+  subsets: ['hebrew', 'latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-heebo',
+});
 
 export default function RootLayout({ children }) {
   return (
     <html lang="he" dir="rtl">
-      <body className={heebo.className}>
+      <body className={`${heebo.variable} ${heebo.className}`}>
         <div className="app-shell">
           <aside className="sidebar">
             <div className="sidebar-header">
