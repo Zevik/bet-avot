@@ -340,6 +340,98 @@ export default function DoctorHome() {
               </table>
             </div>
 
+            <div className="section-card">
+              <div className="section-header">
+                <h3>טופס הוספת תרופה</h3>
+                <p className="muted">מבנה מלא לפי האפיון: שם, מינון, תדירות, דרך מתן ותאריכים.</p>
+              </div>
+              <div className="grid cols-2">
+                <div className="form-group">
+                  <label>שם התרופה</label>
+                  <input placeholder="לדוגמה: Losartan" />
+                </div>
+                <div className="form-group">
+                  <label>מינון</label>
+                  <input placeholder="50mg / 1tab" />
+                </div>
+                <div className="form-group">
+                  <label>תדירות</label>
+                  <select>
+                    <option>פעם ביום</option>
+                    <option>פעמיים ביום</option>
+                    <option>3 פעמים ביום</option>
+                    <option>לפי הצורך</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>דרך מתן</label>
+                  <select>
+                    <option>פומי</option>
+                    <option>זריקה</option>
+                    <option>מקומי</option>
+                    <option>אינהלציה</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>שעות מתן</label>
+                  <input type="time" />
+                </div>
+                <div className="form-group">
+                  <label>תאריך התחלה</label>
+                  <input type="date" />
+                </div>
+                <div className="form-group">
+                  <label>תאריך סיום</label>
+                  <input type="date" />
+                </div>
+                <div className="form-group">
+                  <label>הערות</label>
+                  <textarea rows={3} placeholder="תיעוד חופשי"></textarea>
+                </div>
+              </div>
+              <div className="quick-actions" style={{ marginTop: '12px' }}>
+                <button className="primary">שמור</button>
+                <button className="ghost">ביטול</button>
+              </div>
+            </div>
+
+            <div className="section-card">
+              <div className="section-header">
+                <h3>טופס בדיקה רפואית</h3>
+                <p className="muted">ממצאים, המלצות, בדיקות המשך ותיאום ביקור הבא.</p>
+              </div>
+              <div className="grid cols-2">
+                <div className="form-group">
+                  <label>סוג בדיקה</label>
+                  <select>
+                    <option>בדיקה שגרתית</option>
+                    <option>בדיקה יזומה</option>
+                    <option>בדיקת קבלה</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>תאריך ביקור הבא</label>
+                  <input type="date" />
+                </div>
+              </div>
+              <div className="form-group">
+                <label>ממצאים</label>
+                <textarea rows={2} placeholder="ממצאים קליניים"></textarea>
+              </div>
+              <div className="form-group">
+                <label>המלצות</label>
+                <textarea rows={2} placeholder="המלצות טיפול"></textarea>
+              </div>
+              <div className="form-group">
+                <label>בדיקות המשך</label>
+                <textarea rows={2} placeholder="בדיקות משלימות"></textarea>
+              </div>
+              <div className="quick-actions" style={{ marginTop: '12px' }}>
+                <button className="primary">שמור ושלח</button>
+                <button className="ghost">שמור טיוטה</button>
+              </div>
+            </div>
+
             <div className="grid cols-2">
               <div className="section-card">
                 <div className="section-header">

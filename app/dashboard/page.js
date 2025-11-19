@@ -102,17 +102,81 @@ export default function DashboardPage() {
             <h3>תפוסת חדרים</h3>
             <span className="muted">מצב תפוסה נוכחית</span>
           </div>
-          <div className="occupancy">
-            <div>
-              <div className="percentage">45.0%</div>
-              <div className="muted">9 מתוך 20 חדרים מאוכלסים</div>
-            </div>
+            <div className="occupancy">
+              <div>
+                <div className="percentage">45.0%</div>
+                <div className="muted">9 מתוך 20 חדרים מאוכלסים</div>
+              </div>
             <div>
               {rooms.map((room) => (
                 <div key={room.room} className="muted">חדר {room.room} - {room.status}</div>
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="section-card">
+        <div className="section-header">
+          <div>
+            <h3>מדדי ביצועים וציות</h3>
+            <p className="muted">מדדי Core לשמירה על בטיחות ואיכות טיפול.</p>
+          </div>
+          <div className="quick-actions">
+            <button className="ghost">רענן נתונים</button>
+            <button className="ghost">ייצוא דוח</button>
+          </div>
+        </div>
+        <div className="kpi-grid">
+          <div className="card-stat">
+            <div className="flex-between">
+              <span>זמן תגובה לאירועים</span>
+              <span>⚡</span>
+            </div>
+            <div className="percentage">7 דק׳</div>
+            <div className="muted">יעד: &lt; 10 דק׳</div>
+          </div>
+          <div className="card-stat">
+            <div className="flex-between">
+              <span>ציות חלוקת תרופות</span>
+              <span>💊</span>
+            </div>
+            <div className="percentage">98%</div>
+            <div className="muted">סבב אחרון</div>
+          </div>
+          <div className="card-stat">
+            <div className="flex-between">
+              <span>סיכוני נפילה גבוהים</span>
+              <span>⚠️</span>
+            </div>
+            <div className="percentage">3</div>
+            <div className="muted">דיירים עם ציון &gt; 70</div>
+          </div>
+          <div className="card-stat">
+            <div className="flex-between">
+              <span>אירועי אבטחה</span>
+              <span>🔒</span>
+            </div>
+            <div className="percentage">0</div>
+            <div className="muted">7 ימים אחרונים</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="section-card">
+        <div className="section-header">
+          <div>
+            <h3>קיצורי דרך לעבודה יומיומית</h3>
+            <p className="muted">גישה מהירה לתהליכי עבודה עיקריים מהאפיון.</p>
+          </div>
+        </div>
+        <div className="quick-actions" style={{ flexWrap: 'wrap', gap: '8px' }}>
+          <a className="chip" href="/residents">קליטת דייר חדש</a>
+          <a className="chip" href="/incidentreports">אירוע חריג חדש</a>
+          <a className="chip" href="/nursingshiftreport">דיווח סיעודי חדש</a>
+          <a className="chip" href="/consolidatedcardexselector">חלוקת תרופות</a>
+          <a className="chip" href="/calendar">קבע ישיבת צוות</a>
+          <a className="chip" href="/stickynotes">פתק דחוף לצוות</a>
         </div>
       </div>
     </div>

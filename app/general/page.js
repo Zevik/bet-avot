@@ -30,6 +30,15 @@ export default function GeneralPage() {
             <button className="ghost">הפעל גיבוי</button>
           </div>
         </div>
+        <div className="section-card">
+          <h3>תאימות ורגולציה</h3>
+          <p className="muted">שמירה למשך 7 שנים, הצפנה ו-Audit trail מלא לפי האפיון.</p>
+          <div className="chips">
+            <span className="chip">HIPAA / משרד הבריאות</span>
+            <span className="chip">GDPR</span>
+            <span className="chip">Privacy by Design</span>
+          </div>
+        </div>
       </div>
     </div>
   );
